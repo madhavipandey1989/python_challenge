@@ -37,21 +37,34 @@ with open(budget_csv, 'r') as file:
 
 average_change = average_change/(total_months-1)
 
-print("\n")
-print("Financial Analysis")
-print("\n")
-print("------------------------------------------------------------")
-print("\n")
-print("Total Months: " + str(total_months))
-print("\n")
-print("Total: $" +str(total_amount))
-print("\n")
-print("Average Change:"+str(average_change))
-print("\n")
-print("Greatest Increase in Profits: "+greatest_increase_date +" ($"+str(greatest_increase)+")")
-print("\n")
-print("Greatest Decrease in Profits: "+greatest_decrease_date +" ($"+str(greatest_decrease)+")")
-print("\n")
+output = ""
+
+output= output+"\n"
+output= output+"\n"
+output= output+"Financial Analysis"
+output= output+"\n"
+output= output+"\n"
+output= output+"------------------------------------------------------------"
+output= output+"\n"
+output= output+"\n"
+output= output+"Total Months: " + str(total_months)
+output= output+"\n"
+output= output+"\n"
+output= output+"Total: $" +str(total_amount)
+output= output+"\n"
+output= output+"\n"
+output= output+"Average Change:"+str(average_change)
+output= output+"\n"
+output= output+"\n"
+output= output+"Greatest Increase in Profits: "+greatest_increase_date +" ($"+str(greatest_increase)+")"
+output= output+"\n"
+output= output+"\n"
+output= output+"Greatest Decrease in Profits: "+greatest_decrease_date +" ($"+str(greatest_decrease)+")"
+output= output+"\n"
+output= output+"\n"
 
 
+print(output)
 
+with open('Resources/output.txt', 'w') as f:
+    f.write(output)
